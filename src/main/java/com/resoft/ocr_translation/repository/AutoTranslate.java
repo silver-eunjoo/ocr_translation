@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Getter
 @NoArgsConstructor
-public class TranslateResult {
+public class AutoTranslate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -40,7 +40,7 @@ public class TranslateResult {
     @Column(nullable = false)
     private List<TranslateFile> translateFiles = new ArrayList<>();
 
-    public TranslateResult(TranslateResultRequestDto translateResultRequestDto) {
+    public AutoTranslate(TranslateResultRequestDto translateResultRequestDto) {
         this.id = translateResultRequestDto.getId();
         this.userId = translateResultRequestDto.getUserId();
         this.origin = translateResultRequestDto.getOrigin();
