@@ -1,5 +1,6 @@
 package com.resoft.ocr_translation.repository;
 
+import com.resoft.ocr_translation.dto.ManualTranslateRequestDto;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -30,5 +31,8 @@ public class ManualTranslate {
     @Column(nullable = false)
     private String translate_content;
 
-    public ManualTranslate(ManualTranslateRequestDto)
+    public ManualTranslate(ManualTranslateRequestDto manualTranslateRequestDto) {
+        this.id = manualTranslateRequestDto.getId();
+        this.translate_content = manualTranslateRequestDto.getTranslate_content();
+    }
 }
