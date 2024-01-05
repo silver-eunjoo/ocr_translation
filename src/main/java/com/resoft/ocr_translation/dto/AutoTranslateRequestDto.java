@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class TranslateResultRequestDto {
+public class AutoTranslateRequestDto {
 
     private Long id;
     private Long userId;
@@ -14,7 +14,7 @@ public class TranslateResultRequestDto {
     private String from;
     private String to;
 
-    public TranslateResultRequestDto(Long id, Long userId, String origin, String translate, String from, String to) {
+    public AutoTranslateRequestDto(Long id, Long userId, String origin, String translate, String from, String to) {
         this.id = id;
         this.userId = userId;
         this.origin = origin;

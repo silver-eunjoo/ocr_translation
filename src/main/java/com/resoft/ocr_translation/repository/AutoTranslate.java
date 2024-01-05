@@ -1,6 +1,6 @@
 package com.resoft.ocr_translation.repository;
 
-import com.resoft.ocr_translation.dto.TranslateResultRequestDto;
+import com.resoft.ocr_translation.dto.AutoTranslateRequestDto;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -40,7 +40,7 @@ public class AutoTranslate {
     @Column(nullable = false)
     private List<TranslateFile> translateFiles = new ArrayList<>();
 
-    public AutoTranslate(TranslateResultRequestDto translateResultRequestDto) {
+    public AutoTranslate(AutoTranslateRequestDto translateResultRequestDto) {
         this.id = translateResultRequestDto.getId();
         this.userId = translateResultRequestDto.getUserId();
         this.origin = translateResultRequestDto.getOrigin();
